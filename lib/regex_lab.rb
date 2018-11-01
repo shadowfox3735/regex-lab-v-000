@@ -16,7 +16,11 @@ def words_five_letters_long(text)
 end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
-  if text.match(/\A[AEIOU]/) && text.match(//)
+  if text.match(/\A[AEIOU]/) && text.match(/\W$/)
+    TRUE
+  else
+    FALSE
+  end
 end
 
 def valid_phone_number?(phone)
@@ -24,4 +28,5 @@ def valid_phone_number?(phone)
    TRUE
  else
    FALSE
+ end
 end
